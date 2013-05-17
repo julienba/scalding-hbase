@@ -29,6 +29,8 @@ resolvers += ("snapshots" at
 
 resolvers += "Sonatype OSS Repo" at "https://oss.sonatype.org/content/groups/scala-tools"
 
+resolvers += "Cloudera Repository" at "https://repository.cloudera.com/artifactory/public/"
+
 mainClass := Some("com.twitter.scalding.Tool")
 
   libraryDependencies+= "org.specs2" %% "specs2" % "1.11" % "test"
@@ -39,7 +41,7 @@ mainClass := Some("com.twitter.scalding.Tool")
 
 	libraryDependencies+= "cascading" % "cascading-hadoop" % "2.0.7"
 	
-	libraryDependencies += "com.twitter" % "maple" % "0.2.5"
+	libraryDependencies += "com.twitter" % "maple" % "0.2.7"
 
 	libraryDependencies+= "com.twitter" %% "scalding" % "0.8.2"
 
@@ -47,7 +49,7 @@ mainClass := Some("com.twitter.scalding.Tool")
 
 	libraryDependencies+= "io.netty" % "netty" % "[3.4.6.Final]"
 	
-  libraryDependencies += "org.apache.hbase" % "hbase" % "0.94.3"
+  libraryDependencies += "org.apache.hbase" % "hbase" % "0.92.1-cdh4.1.2"
 
   parallelExecution in Test := false
 
