@@ -7,19 +7,7 @@ import org.apache.hadoop.hbase.io.ImmutableBytesWritable
 import org.apache.hadoop.hbase.util.Bytes
 
 /**
-sqoop import --hbase-create-table  --hbase-table widgets --column-family wi2dgetCF --hbase-row-key id --connect jdbc:mysql://localhost/hadoopguide --table widgets -m 1
-
-Datamodel member (from sqoop)
-<timestamp>-<memberId>                                                                                                                                                                                              
-    CP:lookMemberId
-    CP:visible
-    CP:consultationDate
-    CP:typeConsultationID
-    
-Datamodel memberstat: (need more info about timeline)
-<memberId>
-	data:nbVisit
-        
+sqoop import --hbase-create-table  --hbase-table widgets --column-family wi2dgetCF --hbase-row-key id --connect jdbc:mysql://localhost/hadoopguide --table widgets -m 1        
  * 
  */
 class VisitCount(args: Args) extends Job(args) {
