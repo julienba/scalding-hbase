@@ -21,6 +21,7 @@ object Conversions {
   implicit def bytesToLong(bytes: Array[Byte]): Long = augmentString(bytesToString(bytes)).toLong
   implicit def ibwToString(ibw: ImmutableBytesWritable): String = bytesToString(ibw.get())
   implicit def stringToibw(s: String):ImmutableBytesWritable = new ImmutableBytesWritable(Bytes.toBytes(s))
+  implicit def longToibw(l: Long) = new ImmutableBytesWritable(Bytes.toBytes(l))
 }
 
 
